@@ -14,6 +14,9 @@ public class Objektai {
         Termosas t = new Termosas(1000, 'M');
         System.out.println(t.getTuris());
         System.out.println(t.getSpalva());
+        t.ipilk(250);
+        System.out.println(t.kiekis);
+        System.out.println(t.getTemp());
         
         
 //        p.turis = 300;
@@ -21,7 +24,7 @@ public class Objektai {
         System.out.println(p.kiekis);
         p.kiekis = 0;
         System.out.println(p.kiekis);
-        p.ipilk(100, "Čiut čiut");
+        
         System.out.println(p.kiekis);
         p.ipilk("Čiut čiut", 50);
         System.out.println(p.kiekis);

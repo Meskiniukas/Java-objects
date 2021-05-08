@@ -36,4 +36,15 @@ public class Termosas extends Puodukas {
         this.temp -= kiek;
     }
     
+    @Override
+    public void ipilk(int kiek) {
+        if (kiek <= 0) {
+            return;
+        }
+        this.kiekis += kiek;
+        this.kiekis = this.kiekis > this.getTuris() ? this.getTuris() : this.kiekis;
+        this.temp -= 5;
+    }
+    
+    
 }
