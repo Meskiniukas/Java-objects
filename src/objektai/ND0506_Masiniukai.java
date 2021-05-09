@@ -39,7 +39,7 @@ public class ND0506_Masiniukai {
                     masiniukai[i].stabdyk(kiek);
                 }
                 masiniukai[i].vaziuok();
-                System.out.println("Mašiniukas  " + masiniukai[i].getName() + "; Atstumas: " + masiniukai[i].getDistance() + "; Greitis: " + masiniukai[i].getSpeed()); //PASITIKRINIMUI
+//                System.out.println("Mašiniukas  " + masiniukai[i].getName() + "; Atstumas: " + masiniukai[i].getDistance() + "; Greitis: " + masiniukai[i].getSpeed()); //PASITIKRINIMUI
                 if (masiniukai[i].getDistance() > championdistance) {
                     championdistance = masiniukai[i].getDistance();
                     champion = i;
@@ -47,7 +47,7 @@ public class ND0506_Masiniukai {
             }
             if (championdistance >= tmpfinish) {
                 if (championdistance >= racelength) {
-                    System.out.println("Pasibaigus lenktynėms, po " + tmpfinish + " km LAIMĖJO mašiniukas " + masiniukai[champion].getName() + " 🥇!!! Nuvažiuotas atstumas: " + masiniukai[champion].getDistance() + " km; Greitis: " + masiniukai[champion].getSpeed() + " km/h.\n");
+                    System.out.println("Pasibaigus lenktynėms, po " + racelength + " km LAIMĖJO mašiniukas " + masiniukai[champion].getName() + " 🥇!!! Nuvažiuotas atstumas: " + masiniukai[champion].getDistance() + " km; Greitis: " + masiniukai[champion].getSpeed() + " km/h.\n");
 
                     for (int ii = 0; ii < masiniukai.length - 1; ii++) {
                         for (int i = ii + 1; i < masiniukai.length; i++) {
@@ -64,9 +64,9 @@ public class ND0506_Masiniukai {
                         System.out.println((i + 1) + ". " + masiniukai[i].getName() + " " +masiniukai[i].getDistance() + " km.");
                     }
                     System.out.println("\n");
-
                     break;
                 } else {
+                    tmpfinish = masiniukai[champion].getDistance() >= tmpfinish + tmpfinishbreak ? tmpfinish += tmpfinishbreak : tmpfinish;
                     System.out.println("Po " + tmpfinish + " km pirmauja mašiniukas " + masiniukai[champion].getName() + "; Nuvažiuotas atstumas: " + masiniukai[champion].getDistance() + " km; Greitis: " + masiniukai[champion].getSpeed() + " km/h.");
                     tmpfinish += tmpfinishbreak;
                 }
