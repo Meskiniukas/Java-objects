@@ -12,6 +12,10 @@ public class SportineMasina extends Masina {
         super(name, maxspeed);
     }
 
+    public boolean isSpoiler() {
+        return spoiler;
+    }
+        
     public void setSpoiler(boolean spoiler) {
         this.spoiler = spoiler;
     }

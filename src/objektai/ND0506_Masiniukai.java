@@ -18,8 +18,10 @@ public class ND0506_Masiniukai {
             new Masina("GAZ-24", 140),
             new SportineMasina("AudiRS-6", 300)
         };
+        
+        Masina naujasmasynas = new Masina("Bentley", 300); //Question
 
-        int racelength = 1000;
+        int racelength = 10000;
         int tmpfinish = racelength / 10;
         int tmpfinishbreak = tmpfinish;
         int championdistance = 0;
@@ -31,8 +33,10 @@ public class ND0506_Masiniukai {
                 if (masiniukai[i] instanceof SportineMasina) {
                     if (Math.random() < 0.5) {
                         ((SportineMasina) masiniukai[i]).setSpoiler(true);
+//                        System.out.println(((SportineMasina) masiniukai[i]).isSpoiler()); //Testing
                     } else {
                         ((SportineMasina) masiniukai[i]).setSpoiler(false);
+//                        System.out.println(((SportineMasina) masiniukai[i]).isSpoiler()); //Testing
                     }
                 }
                 if (Math.random() < 0.8) {
@@ -43,7 +47,7 @@ public class ND0506_Masiniukai {
                     masiniukai[i].stabdyk(kiek);
                 }
                 masiniukai[i].vaziuok();
-                System.out.println("Mašiniukas  " + masiniukai[i].getName() + "; Atstumas: " + masiniukai[i].getDistance() + "; Greitis: " + masiniukai[i].getSpeed()); //PASITIKRINIMUI
+//                System.out.println("Mašiniukas  " + masiniukai[i].getName() + "; Atstumas: " + masiniukai[i].getDistance() + "; Greitis: " + masiniukai[i].getSpeed()); //Testing
                 if (masiniukai[i].getDistance() > championdistance) {
                     championdistance = masiniukai[i].getDistance();
                     champion = i;
