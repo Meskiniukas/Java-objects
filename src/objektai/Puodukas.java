@@ -7,7 +7,7 @@ package objektai;
 public class Puodukas {
 
 //    public - matoma visiems
-//    protected - matoma deklaravusioj klasėj ir paveldėjusioj (vaiko) klasėj
+//    protected - matoma deklaravusioj klasėj ir paveldėjusiose (vaikinėse) klasėse
 //    (default) arba (package protected)
 //    private - matoma tik deklaravusioj klasėj
     private int turis;
@@ -79,4 +79,11 @@ public class Puodukas {
         }
     }
 
+    @Override
+    public String toString() {
+        return "Puodukas{" + "turis=" + turis + ", spalva=" + spalva + ", kiekis=" + kiekis + '}';
+    }
+    
+    
+    
 }
