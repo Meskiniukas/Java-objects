@@ -23,7 +23,7 @@ public class SportineMasina extends Masina {
     @Override
     public void gazuok(int kiek) {
         if (!this.spoiler) {
-            this.speed = kiek * 2 + this.speed < this.maxspeed ? this.speed += kiek * 2 : this.maxspeed;
+            super.gazuok(kiek * 2);
         } else {
             super.gazuok(kiek);
         }
@@ -32,7 +32,7 @@ public class SportineMasina extends Masina {
     @Override
     public void stabdyk(int kiek) {
         if (this.spoiler) {
-            this.speed = this.speed - kiek * 2 > 0 ? this.speed -= kiek * 2 : 0;
+            super.stabdyk(kiek * 2);
         } else {
             super.stabdyk(kiek);
         }
