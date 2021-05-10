@@ -10,6 +10,7 @@ public class SportineMasina extends Masina {
 
     public SportineMasina(String name, int maxspeed) {
         super(name, maxspeed);
+        this.spoiler = false;
     }
 
     public boolean isSpoiler() {

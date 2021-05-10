@@ -19,8 +19,6 @@ public class ND0506_Masiniukai {
             new SportineMasina("AudiRS-6", 300)
         };
         
-//        Masina naujasmasynas = new Masina("Bentley", 280); //Question
-
         int racelength = 10000;
         int tmpfinish = racelength / 10;
         int tmpfinishbreak = tmpfinish;
